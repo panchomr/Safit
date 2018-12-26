@@ -1,1 +1,38 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content" type="overlay">
+
+    <ion-header>
+      <ion-toolbar color="secondary">
+        <img  class="imgMenu" src="https://scontent.fscl10-1.fna.fbcdn.net/v/t1.0-9/29792672_189617845154443_5127881916564357558_n.jpg?_nc_cat=104&_nc_ht=scontent.fscl10-1.fna&oh=f910badbfedd258fafa94368e3c37010&oe=5C759134" alt="logo">
+        <ion-title> Pancho Muñoz</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+  
+    <ion-content>
+      <ion-list>
+  
+        <button ion-item (click)="abrirarPagina( tab )">
+          Menu Principal
+        </button>
+
+        <!-- <button ion-item (click)="abrirarPagina( buscarTecnico)">
+          Buscar Técnico
+        </button>
+  
+        <button ion-item (click)="abrirarPagina( solicitudes )">
+          Mis Solicitudes
+        </button>
+        <button ion-item (click)="abrirarPagina( tab )">
+          Mis Datos
+        </button>
+
+        <button ion-item (click)="abrirarPagina( promociones )">
+         Mis Puntos
+        </button> -->
+  
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+
+<ion-nav [root]="rootPage" #content></ion-nav>
