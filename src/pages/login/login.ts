@@ -15,6 +15,7 @@ import { HomePage } from '../home/home';
 export class LoginPage {
   rut: AbstractControl;
   loginForm: FormGroup;
+  
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
@@ -43,5 +44,7 @@ export class LoginPage {
 
     this.navCtrl.setRoot(HomePage);
   }
+
+  
 
 }
