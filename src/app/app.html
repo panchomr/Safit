@@ -1,8 +1,8 @@
 <ion-menu [content]="content" type="overlay">
 
     <ion-header>
-      <ion-toolbar color="secondary">
-        <img  class="imgMenu" src="https://scontent.fscl10-1.fna.fbcdn.net/v/t1.0-9/29792672_189617845154443_5127881916564357558_n.jpg?_nc_cat=104&_nc_ht=scontent.fscl10-1.fna&oh=f910badbfedd258fafa94368e3c37010&oe=5C759134" alt="logo">
+      <ion-toolbar color="test">
+        <img  class="imgRedonda" src="https://scontent.fscl10-1.fna.fbcdn.net/v/t1.0-9/29792672_189617845154443_5127881916564357558_n.jpg?_nc_cat=104&_nc_ht=scontent.fscl10-1.fna&oh=f910badbfedd258fafa94368e3c37010&oe=5C759134">
         <ion-title> Pancho Muñoz</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -15,18 +15,26 @@
           Menu Principal
         </button>
 
-        <!-- <button ion-item (click)="abrirarPagina( buscarTecnico)">
-          Buscar Técnico
+        <button ion-item (click)="abrirarPagina( beneficios)">
+          Mi Perfil
         </button>
   
-        <button ion-item (click)="abrirarPagina( solicitudes )">
-          Mis Solicitudes
+        <button ion-item (click)="abrirarPagina( beneficios )" *ngIf="admin || residente">
+          Mi Casa
         </button>
-        <button ion-item (click)="abrirarPagina( tab )">
-          Mis Datos
-        </button>-->
+        <button ion-item (click)="abrirarPagina( beneficios )" *ngIf="conserje || residente">
+          Seguridad
+        </button>
 
         <button ion-item (click)="abrirarPagina( beneficios )">
+          Espacios Comunes
+        </button>
+
+        <button ion-item (click)="abrirarPagina( beneficios )" *ngIf="residente">
+          Gastos Comunes
+        </button>
+
+        <button ion-item (click)="abrirarPagina( beneficios )" *ngIf="residente">
          Mis Beneficios
         </button> 
   
