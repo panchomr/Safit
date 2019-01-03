@@ -12,6 +12,12 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from "../pages/login/login";
 import { BeneficiosPage } from "../pages/beneficios/beneficios";
 import { TabsPage } from "../pages/tabs/tabs";
+import { RegistroPage } from '../pages/registro/registro';
+import { MiHogarPage } from '../pages/mi-hogar/mi-hogar';
+import { SeguridadPage } from '../pages/seguridad/seguridad';
+import { EspaciosComunesPage } from '../pages/espacios-comunes/espacios-comunes';
+
+// Providers
 import { AuthProvider } from '../providers/auth/auth';
 
 @NgModule({
@@ -20,7 +26,11 @@ import { AuthProvider } from '../providers/auth/auth';
     HomePage,
     LoginPage,
     BeneficiosPage,
-    TabsPage
+    TabsPage,
+    RegistroPage,
+    MiHogarPage,
+    SeguridadPage,
+    EspaciosComunesPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +43,11 @@ import { AuthProvider } from '../providers/auth/auth';
     HomePage,
     LoginPage,
     BeneficiosPage,
-    TabsPage
+    TabsPage,
+    RegistroPage,
+    MiHogarPage,
+    SeguridadPage,
+    EspaciosComunesPage
   ],
   providers: [
     StatusBar,

@@ -9,36 +9,12 @@
   
   
     <ion-content>
-      <ion-list>
-  
-        <button ion-item (click)="abrirarPagina( tab )">
-          Menu Principal
+      <ion-list *ngFor="let p of pages">
+        <button   ion-item   *ngIf="p.visible" (click)="abrirarPagina(p)" >
+          {{p.title}}
         </button>
+      </ion-list> 
 
-        <button ion-item (click)="abrirarPagina( beneficios)">
-          Mi Perfil
-        </button>
-  
-        <button ion-item (click)="abrirarPagina( beneficios )" *ngIf="admin || residente">
-          Mi Casa
-        </button>
-        <button ion-item (click)="abrirarPagina( beneficios )" *ngIf="conserje || residente">
-          Seguridad
-        </button>
-
-        <button ion-item (click)="abrirarPagina( beneficios )">
-          Espacios Comunes
-        </button>
-
-        <button ion-item (click)="abrirarPagina( beneficios )" *ngIf="residente">
-          Gastos Comunes
-        </button>
-
-        <button ion-item (click)="abrirarPagina( beneficios )" *ngIf="residente">
-         Mis Beneficios
-        </button> 
-  
-      </ion-list>
     </ion-content>
   </ion-menu>
 

@@ -31,7 +31,7 @@ export class LoginPage {
               public toastCtrl: ToastController,) {
 
     this.loginForm = formBuilder.group({
-      rut:['',Validators.compose([Validators.required])]
+      rut:['15936732-0',Validators.compose([Validators.required])]
     })              
   }
 
@@ -56,10 +56,10 @@ export class LoginPage {
         //.pipe(first())
         .subscribe(data =>{
           this.usuario = data;
-          this.navCtrl.setRoot(TabsPage);
           this.nombre = this.usuario[0].nombre;
           window.localStorage.setItem('idPerfil', this.usuario[0].idPerfil);
           window.localStorage.setItem('Nombre', this.nombre);
+          this.navCtrl.setRoot(TabsPage);
           console.log(this.usuario);
         },
         error =>{
