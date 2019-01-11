@@ -19,9 +19,9 @@
 
 <ion-content padding class="fondo">
  <h1>Bienvenido Sr(a).  {{nombre}}</h1>
- <h2>Su perfil actualmente es  {{perfil}}</h2>
+ 
 
  <div *ngIf="admin"> este es div de admin ve todo</div>
- <div *ngIf="admin || residente">esta es div residente y lo puede ver tb el admin</div>
+ <div *ngIf="admin || residente">No posee nuevas notificaciones</div>
  <div *ngIf="admin || conserje"> este div es de conserje y lo puede ver solo el conserje y admin</div>
 </ion-content>

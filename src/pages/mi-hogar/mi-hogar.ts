@@ -16,11 +16,21 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class MiHogarPage {
   myForm: FormGroup;
+  zone : any;
+  modeKeys:any;
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               public formBuilder: FormBuilder) {
     this.myForm = this.createMyForm();
+    this.zone = {
+      kind: '-Seleccione-'
+    }
+    this.modeKeys = [
+      'Fuera de Casa',
+      'No Molestar',
+    ]           
+    
   }
 
   ionViewDidLoad() {
@@ -29,12 +39,14 @@ export class MiHogarPage {
 
   private createMyForm(){
     return this.formBuilder.group({
-      name: ['Global Baion Soporte', Validators.required],
-      precio: ['$15.000', Validators.required],
-      email: ['soporte.globalbaion@gmail.com', Validators.required],
-      fechaSolicitud: ["05-11-2018", Validators.required],
-      estado:['Solicitud Cliente',Validators.required],
-      habilidad:['Reparación de cerraduras o cerrojo', Validators.required]
+      ddlEstado:[this.zone, Validators.required],
+      name: ['Francisco Muñoz', Validators.required],
+      depto: ['1005', Validators.required],
+      observacion: ['Estare fuera por vacaciones la unica persona Autorizada para ingresar es Sebastian Costa Rut 1-9', Validators.required],
+      horaInicio: ['20:00', Validators.required],
+      horaTermino: ['02:00', Validators.required],
+      fechaSolicitud: ["01-11-2019", Validators.required]
+      
       
     });
   }
