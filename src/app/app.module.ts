@@ -16,6 +16,7 @@ import { RegistroPage } from '../pages/registro/registro';
 import { MiHogarPage } from '../pages/mi-hogar/mi-hogar';
 import { SeguridadPage } from '../pages/seguridad/seguridad';
 import { EspaciosComunesPage } from '../pages/espacios-comunes/espacios-comunes';
+import { GastosComunesPage } from "../pages/gastos-comunes/gastos-comunes";
 
 // Providers
 import { AuthProvider } from '../providers/auth/auth';
@@ -30,7 +31,8 @@ import { AuthProvider } from '../providers/auth/auth';
     RegistroPage,
     MiHogarPage,
     SeguridadPage,
-    EspaciosComunesPage
+    EspaciosComunesPage,
+    GastosComunesPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { AuthProvider } from '../providers/auth/auth';
     RegistroPage,
     MiHogarPage,
     SeguridadPage,
-    EspaciosComunesPage
+    EspaciosComunesPage,
+    GastosComunesPage
   ],
   providers: [
     StatusBar,

@@ -11,6 +11,7 @@ import { RegistroPage } from '../pages/registro/registro';
 import { MiHogarPage } from '../pages/mi-hogar/mi-hogar';
 import { SeguridadPage } from '../pages/seguridad/seguridad';
 import { EspaciosComunesPage } from '../pages/espacios-comunes/espacios-comunes';
+import { GastosComunesPage } from '../pages/gastos-comunes/gastos-comunes';
 @Component({
   templateUrl: 'app.html'
 })
@@ -54,12 +55,13 @@ export class MyApp {
       this.conserje = true;
     }
     this.pages =[
-      {title:'Menú Principal', component:HomePage,visible:true},
-      {title:'Mi Perfil', component:RegistroPage,visible:true},
-      {title:'Mi Hogar', component:MiHogarPage,visible:this.residente},
-      {title:'Seguridad', component:SeguridadPage,visible:this.residente || this.conserje},
+      {title:'Menú Principal', component:TabsPage,visible:true},
+      {title:'Mi Perfil', component:RegistroPage,visible:false},
+      {title:'Mi Hogar', component:MiHogarPage,visible:true},
+      {title:'Seguridad', component:SeguridadPage,visible:true},
       {title:'Espacios Comunes', component:EspaciosComunesPage,visible:true},
-      {title:'Beneficios y Descuentos', component:BeneficiosPage,visible:this.residente},
+      {title:'Gastos Comunes', component:GastosComunesPage,visible:true},
+      {title:'Beneficios y Descuentos', component:BeneficiosPage,visible:true},
     ];
     
     window.localStorage.clear();

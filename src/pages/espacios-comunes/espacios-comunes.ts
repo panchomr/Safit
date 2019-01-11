@@ -14,8 +14,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'espacios-comunes.html',
 })
 export class EspaciosComunesPage {
+  zone : any;
+  modeKeys:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+    this.zone = {
+      kind: '-Seleccione-'
+    }
+    this.modeKeys = [
+      'Salón de Eventos',
+      'Quincho N°1',
+      'Quincho N°2',
+      'Quincho N°3',
+    ]
   }
 
   ionViewDidLoad() {

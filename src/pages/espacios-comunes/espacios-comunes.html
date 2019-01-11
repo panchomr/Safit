@@ -5,14 +5,35 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>espaciosComunes</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-buttons>
+            <button ion-button
+                    icon-only
+                    menuToggle color="light"
+                    >
+              <ion-icon name="menu"></ion-icon>
+              <div class="titulo">
+                <h6>Safit - Espacios Comunes</h6> 
+              </div>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="fondo">
+  
+      <ion-list>
+        <ion-item style="background-color: rgba(212, 208, 208, 0.3);width: 94% !important;">
+            <ion-label>Espacio Común</ion-label>
+            <ion-select [(ngModel)]="zone.kind">
+              <ion-option *ngFor="let key of modeKeys">{{key}}</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>  
 
+  <div>
+      <!--<button ion-button full class="btn" style="bottom: 0;" color="secondary" (click)="solicitar()">Solicitar</button>--> 
+  </div>
 </ion-content>
