@@ -53,6 +53,7 @@ export class MiHogarPage {
 
   onSubmit(value:any){
     if (this.myForm.valid) {
+      alert('datos Actualizados');
       console.log(value);
       
     }

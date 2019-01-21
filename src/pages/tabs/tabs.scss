@@ -4,4 +4,21 @@ page-tabs {
         background-position: left;
         background-size: auto;
     }
+
+    ion-icon {
+        &[class*="custom-"] {
+          mask-size: contain;
+          mask-position: 50% 50%;
+          mask-repeat: no-repeat;
+          background: #f4f4f4;
+          width: 100px;
+          height: 250px;
+          
+        }
+      
+        &[class*="custom-mobile"] {
+          mask-image: url(../assets/imgs/iconosSVG/beneficios.svg);
+         
+        }
+      }
 }
